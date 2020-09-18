@@ -7,10 +7,15 @@ export const apiV1Router = express.Router();
 export const apiV2Router = express.Router();
 
 // home zone
-userRouter.get("/", (req, res) => res.send("Home"));
-userRouter.get("/join", (req, res) => res.send("join"));
-userRouter.get("/login", (req, res) => res.send("login"));
-userRouter.get("/confirm-account", (req, res) => res.send("confirm-account"));
+userRouter.get("/", userHome);
+userRouter.get("/join", userJoin);
+userRouter.get("/login", userLogin);
+userRouter.get("/confirm-account", uesrConfirmAccount);
+
+const userHome = (req, res) => res.send("Home");
+const userJoin = (req, res) => res.send("join");
+const userLogin = (req, res) => res.send("login");
+const uesrConfirmAccount = (req, res) => res.send("confirm-account");
 
 // course zone
 courseController.get("/", (req, res) => res.send("course home"));
