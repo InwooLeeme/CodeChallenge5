@@ -12,15 +12,21 @@ userRouter.get("/join", userJoin);
 userRouter.get("/login", userLogin);
 userRouter.get("/confirm-account", uesrConfirmAccount);
 
+// user function
 const userHome = (req, res) => res.send("Home");
 const userJoin = (req, res) => res.send("join");
 const userLogin = (req, res) => res.send("login");
 const uesrConfirmAccount = (req, res) => res.send("confirm-account");
 
 // course zone
-courseController.get("/", (req, res) => res.send("course home"));
-courseController.get("/new", (req, res) => res.send("course new"));
-courseController.get("/mine", (req, res) => res.send("course mine"));
+courseController.get("/");
+courseController.get("/new");
+courseController.get("/mine");
+
+// course function
+const courseHome = (req, res) => res.send("course home");
+const courseNew = (req, res) => res.send("course new");
+const courseMine = (req, res) => res.send("course mine");
 
 // api
 
